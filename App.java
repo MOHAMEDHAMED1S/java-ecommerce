@@ -61,32 +61,7 @@ class Cart{
 }
 
 public class App{
-    public static void main(String[] args){
-        Product cheese =new Product("Cheese", 100, 10, 200, 5);
-    Product biscuit =new Product("Biscuit", 150, 5, 700, 2);
-    Product Chips =new Product("Potato Chips", 50, 20, 300, 0);
-    Product juice =new Product("Juice", 80, 4, 500, 7);
-    Product tv =new Product("TV", 3000, 3, 8000, -1);
-    Product card =new Product("Card", 50, 20, 0, -1);
-
-        Customer customer =new Customer("Mohamed Hamed", 4530);
-
-        Cart cart =new Cart();
-        // ممكن تشيل الكومنت عشان تجرب مشكله انتهاء الصلاحية
-        // cart.add(Chips, 1);
-
-        // ممكن تشيل الكومنت هنا عشان تجرب مشكله الكميه  
-        // cart.add(juice, 10);
-
-        cart.add(cheese, 9);
-        cart.add(tv, 1);
-        cart.add(biscuit, 1);
-        cart.add(card, 1);
-
-        checkout(customer, cart);
-    }
-
-    static void checkout(Customer customer, Cart cart){
+        static void checkout(Customer customer, Cart cart){
         if (cart.getItems().isEmpty()){
             System.out.println(" cart is empty.");
             return;
@@ -143,7 +118,7 @@ public class App{
 System.out.println(item.quantity + "x " + item.product.name + " " + (item.product.price *item.quantity));
             }
         }
-        System.out.println("----------------------");
+                System.out.println("----------------------");
         System.out.printf("Subtotal         %.0f\n", subtotal);
         System.out.printf("Shipping         %.0f\n", Fee);
         System.out.printf("Amount Paid      %.0f\n", total);
@@ -152,5 +127,32 @@ System.out.println(item.quantity + "x " + item.product.name + " " + (item.produc
 
         
     }
+    public static void main(String[] args){
+        Product cheese =new Product("Cheese", 100, 10, 200, 5);
+    Product biscuit =new Product("Biscuit", 150, 5, 700, 2);
+    Product Chips =new Product("Potato Chips", 50, 20, 300, 0);
+    Product juice =new Product("Juice", 80, 4, 500, 7);
+    Product tv =new Product("TV", 3000, 3, 8000, -1);
+    Product card =new Product("Card", 50, 20, 0, -1);
+
+        Customer customer =new Customer("Mohamed Hamed", 4530);
+
+        Cart cart =new Cart();
+        // ممكن تشيل الكومنت عشان تجرب مشكله انتهاء الصلاحية
+        // cart.add(Chips, 1);
+
+        // ممكن تشيل الكومنت هنا عشان تجرب مشكله الكميه  
+        // cart.add(juice, 10);
+
+        cart.add(cheese, 9);
+        cart.add(tv, 1);
+        cart.add(biscuit, 1);
+        cart.add(card, 1);
+
+        checkout(customer, cart);
+    }
+
+
+
     
 }

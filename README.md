@@ -1,4 +1,5 @@
 # Ecommerce  Fawry Challenge (Java)
+Sorry I didn't know the repo was private 🙏 I changed it to public.
 
 ## usage example
 ```java
